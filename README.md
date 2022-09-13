@@ -20,8 +20,8 @@ Save the Clean data to the file
 
 # CODE
 ```
-Developed by :V.A.Jithendra
-Registration Number : 212221230043
+Developed by :R.HEMAPRIYA
+Registration Number : 212221230036
 ```
 ```
 import pandas as pd
