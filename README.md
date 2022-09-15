@@ -18,7 +18,7 @@ Remove the null values from the data
 ## STEP 4
 Save the Clean data to the file
 
-# CODE
+# CODE FOR DATA 1:
 ```
 Developed by :R.HEMAPRIYA
 Registration Number : 212221230036
@@ -50,7 +50,7 @@ df.info()
 
 df.isnull().sum()
 ```
-# OUTPUT
+# OUTPUT FOR DATA 1:
 
 DATA:
 
@@ -75,6 +75,55 @@ NON NULL AFTER:
 ![](./8.png)
 
 ![](./9.png)
+
+
+#CODE FOR DATA 2:
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+d = pd.read_csv("/content/Loan_data.csv")
+d
+d.head()
+d.describe()
+d.tail()
+d.isnull().sum()
+d.shape
+d.columns
+d.duplicated
+
+#Using mode method to fill the data in columns as Object(String)
+#mode()[0] - Takes the most reccuring value and fills the empty cells
+d['Gender'] = d['Gender'].fillna(d['Gender'].mode()[0])
+d['Dependents'] = d['Dependents'].fillna(d['Dependents'].mode()[0])
+d['Self_Employed'] = d['Self_Employed'].fillna(d['Self_Employed'].mode()[0])
+
+#Using mean method to fill the data
+d['LoanAmount'] = d['LoanAmount'].fillna(d['LoanAmount'].mean())
+d['Loan_Amount_Term'] = d['Loan_Amount_Term'].fillna(d['Loan_Amount_Term'].mean())
+d['Credit_History'] = d['Credit_History'].fillna(d['Credit_History'].mean())
+
+sns.boxplot(y="LoanAmount",data=d)
+
+#Checking the total no.of null values
+again
+d.isnull().sum()
+
+#Checking info of the dataset to check all the columns have entries
+d.info()
+
+
+#OUTPUT:
+![OUTPUT](./10.png)
+![OUTPUT](./11.png)
+![OUTPUT](./12.png)
+![OUTPUT](./13.png)
+![OUTPUT](./14.png)
+![OUTPUT](./15.png)
+![OUTPUT](./16.png)
+![OUTPUT](./17.png)
+![OUTPUT](./18.png)
+![OUTPUT](./19.png)
 
 # RESULT:
 Thus the given data is read,cleansed and cleaned data is saved into the file. 
