@@ -78,7 +78,7 @@ NON NULL AFTER:
 
 
 #CODE FOR DATA 2:
-
+```
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -111,7 +111,7 @@ d.isnull().sum()
 
 #Checking info of the dataset to check all the columns have entries
 d.info()
-
+```
 
 #OUTPUT:
 ![OUTPUT](./10.png)
